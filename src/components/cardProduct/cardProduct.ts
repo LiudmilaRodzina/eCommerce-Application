@@ -92,11 +92,13 @@ export default class Card {
       this.description,
       this.price,
     );
-    if (discount !== 'undefined undefined') {
+
+    if (discount && discount !== 'undefined undefined') {
       this.price.classList.add('discount');
       this.discount.innerText = discount as string;
       this.wrapper_Card.append(this.discount);
     }
+
     this.addBtn.innerText = text;
     this.addBtn.append(this.imgCart);
     this.wrapper_Card.append(this.addBtn);
