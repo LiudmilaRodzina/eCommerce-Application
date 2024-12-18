@@ -3,17 +3,11 @@
   "parserOptions": {
     "project": ["./tsconfig.json"]
   },
-  "extends": [
-    "airbnb-base",
-    "eslint:recommended",
-     "prettier"
-  ],
+  "extends": ["airbnb-base", "eslint:recommended", "prettier"],
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-        ".ts"
-        ]
+        "extensions": [".ts"]
       },
       "typescript": {}
     }
@@ -30,12 +24,7 @@
       }
     ]
   },
-  "plugins": [
-    "@typescript-eslint",
-    // "@typescript-eslint-recommended",
-    "prettier"
-   
-  ],
+  "plugins": ["@typescript-eslint", "prettier"],
   "env": {
     "browser": true,
     "node": true,
@@ -43,4 +32,3 @@
     "es2020": true
   }
 }
-  

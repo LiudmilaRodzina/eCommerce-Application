@@ -118,6 +118,14 @@ export default class Product {
       this.description,
       this.btnCart,
     );
+
+    if (discountPrice) {
+      this.discountPrice.classList.add('discount-price');
+      this.price.classList.add('start-price');
+    } else {
+      this.price.classList.add('price-prod');
+    }
+
     this.priceBox.append(this.discountPrice, this.price);
 
     this.cart.then((data) => {
@@ -137,6 +145,8 @@ export default class Product {
       const { images = [] } = product.masterVariant;
       const title = product.name['en-US'];
       let discountPrice: number | undefined;
+      const price = product.masterVariant.prices![2].value.centAmount / 100;
+
       if (product.masterVariant.prices && product.masterVariant.prices[2]) {
         const discountedValue =
           product.masterVariant.prices[2].discounted?.value.centAmount;
@@ -145,12 +155,20 @@ export default class Product {
         }
       }
 
-      const price = product.masterVariant.prices![2].value.centAmount / 100;
       const { 'en-US': description } = product.description!;
+
       this.title.innerText = title;
-      this.discountPrice.innerText = discountPrice ? `$${discountPrice}` : '';
       this.price.innerText = `$${price}`;
       this.description.innerText = description;
+
+      if (discountPrice) {
+        this.price.classList.add('start-price');
+        this.discountPrice.innerText = `$${discountPrice}`;
+      } else {
+        this.price.classList.remove('start-price');
+        this.discountPrice.innerText = '';
+      }
+
       this.createImageSlider(images);
     } catch (err) {
       window.history.pushState({}, '', '/err');

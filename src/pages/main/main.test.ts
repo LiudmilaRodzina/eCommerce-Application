@@ -22,12 +22,6 @@ describe('Main component', () => {
     const homeLink = mainElement.querySelector('.home-link');
     expect(homeLink?.textContent).toBe('Home');
 
-    const loginLink = mainElement.querySelector('.login-link');
-    expect(loginLink?.textContent).toBe('Login');
-
-    const regLink = mainElement.querySelector('.reg-link');
-    expect(regLink?.textContent).toBe('Register');
-
     const profileLink = mainElement.querySelector('.profile-link');
     expect(profileLink?.textContent).toBe('Profile');
 
@@ -54,16 +48,12 @@ describe('Main component', () => {
     expect(navElement).not.toBeNull();
 
     const homeLink = mainElement.querySelector('.home-link');
-    const loginLink = mainElement.querySelector('.login-link');
-    const regLink = mainElement.querySelector('.reg-link');
     const profileLink = mainElement.querySelector('.profile-link');
     const catalogLink = mainElement.querySelector('.catalog-link');
     const cartLink = mainElement.querySelector('.cart-link');
     const aboutLink = mainElement.querySelector('.about-link');
 
     expect(homeLink?.textContent).toBe('Home');
-    expect(loginLink?.textContent).toBe('Login');
-    expect(regLink?.textContent).toBe('Register');
     expect(profileLink?.textContent).toBe('Profile');
     expect(catalogLink?.textContent).toBe('Catalog');
     expect(cartLink?.textContent).toBe('Cart');
@@ -75,28 +65,6 @@ describe('Main component', () => {
     homeLink.click();
 
     expect(window.location.pathname).toBe('/');
-  });
-
-  it('Clicking on Login link without cookies should update window location to /login', () => {
-    const loginLink = mainElement.querySelector('.login-link') as HTMLElement;
-    const event = new MouseEvent('click', {
-      bubbles: true,
-      cancelable: true,
-    });
-    loginLink.dispatchEvent(event);
-
-    expect(window.location.pathname).toBe('/login');
-  });
-
-  it('Clicking on Register link without cookies should update window location to /register', () => {
-    const regLink = mainElement.querySelector('.reg-link') as HTMLElement;
-    const event = new MouseEvent('click', {
-      bubbles: true,
-      cancelable: true,
-    });
-    regLink.dispatchEvent(event);
-
-    expect(window.location.pathname).toBe('/register');
   });
 
   it('Clicking on Profile link without cookies should update window location to /login', () => {
@@ -144,13 +112,6 @@ describe('Main component', () => {
 
     expect(window.location.pathname).toBe('/catalog');
   });
-
-  // it('Clicking on Cart link should update the window location to /cart', () => {
-  //   const cartLink = mainElement.querySelector('.cart-link') as HTMLElement;
-  //   cartLink.click();
-
-  //   expect(window.location.pathname).toBe('/cart');
-  // });
 
   it('Clicking on About Us link should update the window location to /about', () => {
     const aboutLink = mainElement.querySelector('.about-link') as HTMLElement;

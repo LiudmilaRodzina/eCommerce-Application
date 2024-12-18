@@ -824,7 +824,7 @@ export default class Profile {
               ) as HTMLSelectElement | null;
 
               if (countryField) {
-                countryField.value = address.country || ''; // Set the country value
+                countryField.value = address.country || '';
               }
             });
 
