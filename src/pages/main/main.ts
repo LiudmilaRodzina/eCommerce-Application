@@ -134,10 +134,8 @@ export default class Main {
 
     this.nav.append(
       this.homeLink,
-      this.loginLink,
-      this.regLink,
-      this.profileLink,
       this.catalogLink,
+      this.profileLink,
       this.cartLink,
       this.aboutLink,
     );
