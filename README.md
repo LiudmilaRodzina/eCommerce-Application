@@ -1,5 +1,7 @@
 ### eCommerce Project
 
+Deploy on Netlify: **[eCommerce-Application](https://rss-ecommerce-app-project.netlify.app/)**
+
 This eCommerce application provides a comprehensive shopping experience, leveraging [CommerceTools API](https://docs.commercetools.com/api/) for product data retrieval and management.
 
 The project is a team effort and serves as the final task for [The Rolling Scopes JavaScript / Front-end Course](https://rs.school/courses/javascript-ru).
