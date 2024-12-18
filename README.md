@@ -1,6 +1,6 @@
 ### eCommerce Project
 
-Deploy on Netlify: **[eCommerce-Application](https://rss-ecommerce-app-project.netlify.app/)**
+Deployment on Netlify: **[eCommerce-Application](https://rss-ecommerce-app-project.netlify.app/)**
 
 This eCommerce application provides a comprehensive shopping experience, leveraging [CommerceTools API](https://docs.commercetools.com/api/) for product data retrieval and management.
 
