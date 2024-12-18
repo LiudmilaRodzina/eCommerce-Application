@@ -8,10 +8,10 @@ interface EconEnv {
 }
 
 export const Env: EconEnv = {
-  CTP_PROJECT_KEY: 'ecommerce-application-project',
-  CTP_CLIENT_SECRET: 'hebehXtby6lH3KRlpq_dfsiaA9uI1H22',
-  CTP_CLIENT_ID: 'Mt9vM_wZdATNYapenxLh2ENr',
-  CTP_AUTH_URL: 'https://auth.europe-west1.gcp.commercetools.com',
-  CTP_API_URL: 'https://api.europe-west1.gcp.commercetools.com',
-  CTP_SCOPES: 'manage_project:ecommerce-application-project',
+  CTP_PROJECT_KEY: 'rss-project-241217',
+  CTP_CLIENT_SECRET: 'Vd-wfCrP0vYwt0YcNHRH1lj3Qxe41tP7',
+  CTP_CLIENT_ID: '2vjhI_hfrBcipF6hUk-uZ8zW',
+  CTP_AUTH_URL: 'https://auth.us-central1.gcp.commercetools.com',
+  CTP_API_URL: 'https://api.us-central1.gcp.commercetools.com',
+  CTP_SCOPES: 'manage_project:rss-project-241217',
 };
